@@ -220,6 +220,10 @@ section.questions a.active {
     opacity: 1;
 }
 
+.btn-start {
+    background-color: #2c3e50;
+}
+
 .floating-label-form-group-with-focus label {
     color: #18bc9c;
 }
