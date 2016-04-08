@@ -127,38 +127,43 @@
                         </select>
                     </div>
                 </form>
+		<div class="col-lg-6 text-left">
+			<form role="form">
+		            <div class="cc-selector">
+		                <input id="male" type="radio" name="credit-card" value="male" />
+		                <label class="drinkcard-cc male" for="male"></label>
+
+		                <input id="female" type="radio" name="credit-card" value="female" />
+		                <label class="drinkcard-cc female" for="female"></label>
+		            </div>
+		        </form>
+		</div>
             </div>
-            <div class="col-lg-6 text-left">
-                <!-- <form>
-                    <div class="cc-selector">
-                        <input id="visa" type="radio" name="credit-card" value="visa" />
-                        <label class="drinkcard-cc male" for="visa"></label>
-                        <input id="mastercard" type="radio" name="credit-card" value="mastercard" />
-                        <label class="drinkcard-cc female" for="mastercard"></label>
-                    </div>
-                </form> -->
 
+            <!--<div class="col-lg-6 text-left">-->
+                 
 
+                <!--
                  <form role="form">
-                     <label class="radio-inline">
+                     <label class="radio-inline drinkcard-cc">
                          <input type="radio" name="optradio"><img width="50%" height="50%" src="img/female.png">
                      </label>
-                     <label class="radio-inline">
+                     <label class="radio-inline drinkcard-cc">
                          <input type="radio" name="optradio"><img width="50%" height="50%" src="img/male.png">
                      </label>
                  </form>
-            </div>
-        </div>
+            </div> -->
+
+        <!--</div>-->
         <div class="row">
             <div class="col-lg-4 col-lg-offset-4 text-center">
-                <button type="submit" class="btn btn-dark btn-lg ">CREATE </button>
+                <button type="submit" class="btn btn-dark btn-lg ">CREATE</button>
             </div>
         </div>
         <br/>
-        <ul class="pager">
+        <!--<ul class="pager">
             <li><a href="index.html#page-top">Previous</a></li>
-            <li><a href="#">Next</a></li>
-        </ul>
+        </ul>-->
     </div>
 </header>
 
@@ -193,8 +198,6 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/freelancer.js"></script>
 
-<!-- AngularJS Library -->
-<script src="js/angular.min.js"></script>
 
 </body>
 

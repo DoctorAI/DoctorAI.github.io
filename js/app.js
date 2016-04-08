@@ -1,24 +1,14 @@
-var app = angular.module('instantsearch',[]);
-app.controller('instantSearchCtrl',function($scope,$http){
-    $http.get('data.json').success(function(data, status, headers, config) {
-        $scope.items = data.data;
-    }).error(function(data, status, headers, config) {
-        console.log("No data found..");
-  });
-});
-
-app.filter('searchFor', function(){
-    return function(arr, searchString){
-        if(!searchString){
-            return arr;
-        }
-        var result = [];
-        searchString = searchString.toLowerCase();
-        angular.forEach(arr, function(item){
-            if(item.title.toLowerCase().indexOf(searchString) !== -1){
-            result.push(item);
-        }
-        });
-        return result;
-    };
+//define app module with dependency
+var app = angular.module("MyApp", ["LiveSearch"]);
+app.controller("MyController", function($scope, $http, $q, $window) {
+   $scope.search1 = "";
+   //your search callback
+   $scope.mySearchCallback = function () {
+      var defer = $q.defer();
+      defer.resolve([
+        { city: "nailuva", state: "ce", country: "fiji"},
+        { city: "suva", state: "ce", country: "fiji"}
+      ]);
+      return defer.promise;
+   };
 });

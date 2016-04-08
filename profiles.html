@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DR.AI</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfill -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-all.umd.js"></script>
+
+    <!-- 2. Load our 'modules' -->
+    <script src='app/app.component.js'></script>
+    <script src='app/main.js'></script>
+
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html#page-top">Dr.AI</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="index.html#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#page-top">Start</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#about">About</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#feedback">Give us feedback</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="index.html#questions">Questions</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="">
+                    <h2>Are any of these you?</h2>
+                    <p>Please select a profile below.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4 text-c">
+                <div class="row padd">
+                    <a href="diagnosis.html" type="submit" class="btn btn-dark btn-lg btn-profile whitetext">BERIT 20</a>
+                </div>
+                <div class="row padd">
+                    <a href="diagnosis.html" type="submit" class="btn btn-dark btn-lg btn-profile whitetext">Inga-Lill 66 Man</a>
+                </div>
+                <div class="row padd">
+                    <a href="diagnosis.html" type="submit" class="btn btn-dark btn-lg btn-profile whitetext">ÅKE </a>
+                </div>
+                <p>If none of these match you,<br/> please create a new profile below.</p>
+                <br/>
+            </div>
+        </div>
+       
+       
+       <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+       <div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    Click here to make a profile.
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse ">
+								<div class="panel-body answer text-center">
+                               		
+                               		 <form role="form">
+								                
+								                    <select class="form-control" id="sel1">
+								                        <option value="" selected disabled>Select age</option>
+								                        <option>0-12</option>
+								                        <option>13-24</option>
+								                        <option>25-39</option>
+								                        <option>40-65</option>
+								                        <option>65+</option>
+								                    </select>
+								                <br/>
+								                <div class="cc-selector">
+										            <input class='no-radio' id="male" type="radio" name="credit-card" value="male" />
+										            <label class="drinkcard-cc male" for="male"></label>
+										            <input class='no-radio' id="female" type="radio" name="credit-card" value="female" />
+										            <label class="drinkcard-cc female" for="female"></label>
+										        </div>
+										    </form>
+										    
+										    <a href="diagnosis.html" type="submit" class="btn btn-dark btn-lg whitetext">CREATE</a>
+                               		
+								</div>
+							</div>
+						</div>
+       
+       </div>
+       </div>
+       
+       
+       
+	     <!--   <div class="row">
+	            <form role="form" align="center">
+	                <div class="col-lg-2 col-lg-offset-4  text-center">
+	                    <select class="form-control" style='width: 150px;' id="sel1">
+	                        <option value="" selected disabled>Select age</option>
+	                        <option>0-12</option>
+	                        <option>13-24</option>
+	                        <option>25-39</option>
+	                        <option>40-65</option>
+	                        <option>65+</option>
+	                    </select>
+	                </div>
+	                <div class="cc-selector">
+			            <input class='no-radio' id="male" type="radio" name="credit-card" value="male" />
+			            <label class="drinkcard-cc male" for="male"></label>
+			            <input class='no-radio' id="female" type="radio" name="credit-card" value="female" />
+			            <label class="drinkcard-cc female" for="female"></label>
+			        </div>
+			    </form>
+			</div> -->
+			
+		
+			
+            <!--<div class="col-lg-6 text-left">-->
+                 
+
+                <!--
+                 <form role="form">
+                     <label class="radio-inline drinkcard-cc">
+                         <input type="radio" name="optradio"><img width="50%" height="50%" src="img/female.png">
+                     </label>
+                     <label class="radio-inline drinkcard-cc">
+                         <input type="radio" name="optradio"><img width="50%" height="50%" src="img/male.png">
+                     </label>
+                 </form>
+            </div> -->
+
+        <!--</div>-->
+        
+        
+        <br/>
+        <!--<ul class="pager">
+            <li><a href="index.html#page-top">Previous</a></li>
+        </ul>-->
+    </div>
+</header>
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Your Website 2016
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/freelancer.js"></script>
+
+
+</body>
+
+</html>
