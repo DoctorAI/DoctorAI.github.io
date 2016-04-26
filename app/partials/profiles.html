@@ -1,0 +1,52 @@
+<!-- Profiles -->
+<header>
+	<div class="container">
+	    <div class="row">
+	        <div class="col-lg-12">
+	            <div class="">
+	                <h2>Are any of these you?</h2>
+	                <p>Please select a profile below.</p>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="row">
+	        <div class="col-lg-4 col-lg-offset-4 text-c">
+	            <div class="row padd">
+	                <a href="#diagnosis" type="submit" class="btn btn-dark btn-lg btn-profile whitetext">13-24 years old male</a>
+	            </div>
+	            <div class="row padd">
+	                <a href="#diagnosis" type="submit" class="btn btn-dark btn-lg btn-profile whitetext">65+ years old female</a>
+	            </div>
+	            <div class="row padd">
+	                <a href="#diagnosis" type="submit" class="btn btn-dark btn-lg btn-profile whitetext">25-39 years old female</a>
+	            </div>
+	            <p>If none of these match you,<br/> please create a new profile below.</p>
+	            <br/>
+	        </div>
+	    </div>
+	   
+		<form name="profileForm" ng-controller='profilesCtrl' ng-submit="" novalidate>
+		   <div class="row">
+		        <div class="col-lg-4 col-lg-offset-4">
+	                <select name='ageGroup' class="form-control" ng-model="profile.ageGroup" required>
+	                	<option value="" selected disabled>Select age</option>
+	                	<option ng-repeat="v in ageGroup" >{{v.age}}</option>
+	                </select>
+	            	<br/>
+		            <div ng-class="{ 'has-error' : profileForm.gender.$invalid && !profileForm.gender.$pristine }" class="cc-selector">
+			            <input class='no-radio' id="male" type="radio" name="gender" value="male" ng-model='profile.gender' required></input>
+			            <label class="drinkcard-cc male" for="male"></label>
+			            <input class='no-radio' id="female" type="radio" name="gender" value="female" ng-model='profile.gender' required></input>
+			            <label class="drinkcard-cc female" for="female"></label>
+			        </div>
+				</div>
+				<a ng-href='#diagnosis' type="submit" class="btn btn-primary" ng-disabled="profileForm.$invalid">Send</a>
+				
+			    <p><tt>invalid form: {{profileForm.$invalid}}</tt></p>
+			    <p><tt>ageGroup: {{profileForm.ageGroup.$modelValue}}</tt></p>
+			    <p><tt>gender: {{profileForm.gender.$modelValue}}</tt></p>
+				
+			</div>
+		</form>
+	</div>
+</header>

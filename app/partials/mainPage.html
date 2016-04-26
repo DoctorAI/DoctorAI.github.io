@@ -1,0 +1,114 @@
+ <!-- Home -->
+ <header ng-app="mainApp" ng-controller="homeCtrl">
+        <div class="container" id="page-top">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="../img/doc.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Welcome to Dr.AI</span>
+						<div class="col-lg-8 col-lg-offset-2">
+							<p>Hi, I'm Dr. AI, the digital doctor! I will provide you a diagnosis of your symptoms. Please enter your symptoms in the text field below and answer some quick questions so I may help you.</p>
+						</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4 text-left blacktext">
+                     
+				     <form name="symptomForm" ng-submit="" novalidate>
+						<div class="form-group" ng-class="{ 'has-error' : feedbackForm.text.$invalid && !feedbackForm.text.$pristine }">
+							<div class="row control-group">
+								<div class="form-group col-xs-12 controls">
+						            <tags-input name="sympt" ng-model="tags"
+								    	 add-from-autocomplete-only="true" 
+								    	 max-tags="8" 
+								    	 placeholder="Add a symptom" 
+								    	 min-tags="1"
+								    	 ng-model='tags'>
+								      <auto-complete source="loadTags($query)" 
+								     		min-length="0" 
+								     		load-on-focus="true"
+				                     		load-on-empty="true">
+				                      </auto-complete>
+								    </tags-input>
+								</div>
+							</div>
+							<a ng-show="!symptomForm.$invalid" ng-href="#profiles" class="btn btn-dark btn-lg whitetext">Start</a>
+						</div>
+					</form>
+					
+					<p>Current symptoms: {{tags}}</p>
+					
+				</div>
+            </div>
+        </div>
+ </header>
+
+<!-- About -->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>About</h2>
+				<br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <p id="feedback">Dr. AI aims to connect symptoms to a plausible diagnosis with high accuracy - all through a tidy user interface! Use Dr. AI for general guidelines on how to deal with your symptoms. Substituting Dr. AI for an actual medical exam is not recommended, seek professional help especially in case of emergency.</p>
+                <div id="feed">
+                    <br/><br/>
+                    <p>What do you think of this website?<br />
+                    Your feedback helps us make improvements.</p>
+                    <form name="feedbackForm" ng-submit="" novalidate>
+						<div class="form-group" ng-class="{ 'has-error' : feedbackForm.text.$invalid && !feedbackForm.text.$pristine }">
+							<div class="row control-group">
+								<div class="form-group col-xs-12 controls">
+						            <textarea type="text" rows='5' placeholder="Please share your thoughts here" name="text" class="form-control" ng-model="user.feedback" required></textarea>
+						            <p ng-show="feedbackForm.text.$invalid && !feedbackForm.text.$pristine" class="help-block">No text entered</p>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary" ng-disabled="feedbackForm.$invalid">Send</button>
+						</div>
+					</form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Questions -->
+<section id="questions" class='questions'>
+    <div class="container">
+		<div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Questions</h2>
+				<br />
+			</div>
+		</div>
+		<div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+            	
+            	<li><h4>How certain is Dr. AI's diagnosis?</h4></li>
+            	<blockquote>
+                	<p>
+                		This service only connects symptoms to a possible diagnosis. Accuracy is our goal, but sadly not guaranteed.
+                	</p>
+            	</blockquote>
+            	<li><h4>Is Dr. AI a real doctor?</h4></li>
+            	<blockquote>
+                	<p>
+                		No, he is a robot. AI stands for artificial intelligence, which means programmed mind!
+					</p>
+            	</blockquote>
+            	<li><h4>What are 'profiles' and why do you remember them?</h4></li>
+            	<blockquote>
+                	<p>
+						Profiles are stored to save precious time when using Dr. AI. The information is anonymous and also allows us to make improvements thanks to your feedback.
+					</p>
+            	</blockquote>
+            	
+            </div>
+        </div>
+    </div>
+</section>
